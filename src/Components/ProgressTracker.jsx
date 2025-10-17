@@ -1,8 +1,12 @@
 
-export default function ProgressTracker() {
+export default function ProgressTracker({tasks}) {
+  const completedTasks = tasks.filter((t) => t.completed).length
+  const totalTasks = tasks.length;
+  const progress = totalTasks == 0 ? 0: (completedTasks/totalTasks) * 100;
+
   return (
     <div>
-       <h1> ProgressTracker </h1>
+
     </div>
   )
 }
